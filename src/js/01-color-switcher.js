@@ -1,22 +1,23 @@
 const startBtn = document.querySelector('button[data-start]');
-const stoptBtn = document.querySelector('button[data-stop]');
+const stopBtn = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
+let timerId = null;
 
-stoptBtn.setAttribute('disabled', 'disabled');
+stopBtn.setAttribute('disabled', 'disabled');
 startBtn.addEventListener('click', onStart);
-stoptBtn.addEventListener('click', onStop);
+stopBtn.addEventListener('click', onStop);
 
 function onStart() {
     startBtn.setAttribute('disabled', 'disabled');
-    stoptBtn.removeAttribute('disabled');
-    id = setInterval(() => {   
+    stopBtn.removeAttribute('disabled');
+    timerId = setInterval(() => {   
         body.style.backgroundColor = getRandomHexColor();
     }, 1000)
 }
 
 function onStop() {
-    clearInterval(id);
-    stoptBtn.setAttribute('disabled', 'disabled');
+    clearInterval(timerId);
+    stopBtn.setAttribute('disabled', 'disabled');
     startBtn.removeAttribute('disabled');
 }
 
