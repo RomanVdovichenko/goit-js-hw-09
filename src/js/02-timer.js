@@ -43,6 +43,7 @@ startBtn.addEventListener('click', timerStart);
 
 function timerStart() {
     updateTimer();
+    inputDateEnd.setAttribute('disabled', 'disabled');
     startBtn.setAttribute('disabled', 'disabled');
         id = setInterval(() => {
             if (timer >= 1000) {
