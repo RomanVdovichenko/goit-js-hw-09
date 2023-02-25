@@ -45,7 +45,7 @@ function timerStart() {
     updateTimer();
     inputDateEnd.setAttribute('disabled', 'disabled');
     startBtn.setAttribute('disabled', 'disabled');
-        id = setInterval(() => {
+        const id = setInterval(() => {
             if (timer >= 1000) {
                 timer -= 1000;
                 updateTimer();
