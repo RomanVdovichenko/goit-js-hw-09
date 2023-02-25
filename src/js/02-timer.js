@@ -50,7 +50,7 @@ function timerStart() {
                 timer -= 1000;
                 updateTimer();
             } else {
-                clearInterval(id);
+                clearInterval(id),
                 Notiflix.Notify.success("Time is up!");
             }                
     },1000)
