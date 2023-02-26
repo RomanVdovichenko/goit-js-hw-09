@@ -35,7 +35,7 @@ const options = {
   },
 };
 
-startBtn.setAttribute('disabled', 'disabled');
+startBtn.setAttribute('disabled', '');
 
 flatpickr(inputDateEnd, options);
 
@@ -43,8 +43,8 @@ startBtn.addEventListener('click', timerStart);
 
 function timerStart() {
     updateTimer();
-    inputDateEnd.setAttribute('disabled', 'disabled');
-    startBtn.setAttribute('disabled', 'disabled');
+    inputDateEnd.setAttribute('disabled', '');
+    startBtn.setAttribute('disabled', '');
         const id = setInterval(() => {
             if (timer >= 1000) {
                 timer -= 1000;
