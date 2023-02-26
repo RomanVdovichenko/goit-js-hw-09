@@ -23,7 +23,7 @@ function onSubmit(evt) {
   const stepDelay = Number(form.elements.step.value);
   const amountPromise = Number(form.elements.amount.value);
   let del = firstDelay;
-  for (i = 1; i <= amountPromise; i += 1){
+  for (let i = 1; i <= amountPromise; i += 1){
     createPromise(i, del)
     .then(({ position, delay }) => {
       console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
